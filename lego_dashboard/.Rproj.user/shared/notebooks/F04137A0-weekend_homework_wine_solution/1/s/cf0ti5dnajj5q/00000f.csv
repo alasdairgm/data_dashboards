@@ -1,0 +1,2 @@
+"0","wine_white <- read_csv(""../data/wine_quality_white.csv"")"
+"0","head(wine_white)"

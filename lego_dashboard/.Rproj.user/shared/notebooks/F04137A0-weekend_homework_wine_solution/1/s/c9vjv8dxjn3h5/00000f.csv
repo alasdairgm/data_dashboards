@@ -1,0 +1,13 @@
+"0","alias(quality ~ ., data = wine_both)"
+"1","Model"
+"1"," "
+"1",":
+"
+"1","quality ~ wine_colour + fixed_acidity + volatile_acidity + citric_acid + 
+"
+"1","    residual_sugar + chlorides + free_sulfur_dioxide + total_sulfur_dioxide + 
+"
+"1","    density + p_h + sulphates + alcohol + region
+"
+"1","
+"

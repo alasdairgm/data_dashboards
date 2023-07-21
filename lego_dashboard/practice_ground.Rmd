@@ -1,0 +1,98 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+
+```{r}
+lego %>% 
+  group_by(theme_name) %>% 
+  summarise(av_rating = mean(star_rating, na.rm = TRUE)) %>% 
+  ggplot() +
+  geom_col(aes(x = theme_name, y = as.numeric(av_rating)), fill = "indianred") +
+  labs(y = "Average set rating (stars)",
+       x = "Theme") +
+  theme_minimal() +
+  coord_cartesian(ylim = c(3, 5.5)) +
+  theme(axis.text = element_text(size = 12, face = "bold", hjust = 1, angle = 45),
+        axis.title = element_text(size = 12, face = "bold"))
+
+
+```
+
+```{r}
+
+
+lego %>% 
+  ungroup() %>% 
+  mutate(theme_name = fct_reorder(theme_name, star_rating, median,  na.rm = TRUE)) %>% 
+  ggplot(aes(x = theme_name, y = star_rating)) +
+           geom_boxplot(fill = "goldenrod", col = "black") +
+           stat_boxplot(geom = "errorbar") +
+           labs(y = "Average set rating (stars)",
+                x = "Theme") +
+           theme_minimal() +
+           # coord_cartesian(ylim = c(4, 5)) +
+           theme(axis.text = element_text(size = 6, face = "bold", hjust = 1, angle = 45),
+                 axis.title = element_text(size = 12, face = "bold"),
+                 title = element_text(size = 14, face = "bold")) +
+           labs(title = "Lego themes arranged by average star rating") 
+```
+
+
+------------------ Geospatial ------------------
+
+Here I will try out leaflet
+
+```{r}
+library(sf)
+library(rnaturalearth)
+library(rnaturalearthdata)
+library(rgeos)
+```
+
+```{r}
+world <- ne_countries(scale = "medium", returnclass = "sf")
+
+world
+head(world, 1)
+```
+
+```{r}
+ggplot(data = world) +
+    geom_sf(colour = "black", fill = "lightgreen") +
+    xlab("Longitude") + ylab("Latitude") +
+    ggtitle("World map") +
+  geom_point(data = legoland_geo,
+             aes(x = long, y = lat),
+             col = "gold1", size = rel(2))
+```
+
+```{r}
+library(leaflet)
+library(htmltools)
+```
+
+Create legoland location tibble
+
+```{r}
+legoland_geo <- tibble(name = c("Windsor", "Billund", "California", "Florida", "New York", "Malaysia", "Dubai", "Japan", "Korea", "Germany"),
+                       lat = c(51.46, 55.74, 33.13, 27.99, 41.38, 1.43, 24.92, 35.05, 37.88, 48.43),
+                       long = c(-0.65, 9.13, -117.31, -81.69, -74.31, 103.63, 55.01, 136.84, 127.70, 10.30))
+```
+
+
+```{r}
+leaflet(legoland_geo) %>% 
+  addProviderTiles(providers$Stamen.Watercolor)  %>% 
+  # addCircleMarkers(lat = ~lat, lng = ~long, popup = ~paste0("Legoland ", name))
+  addCircleMarkers(lat = ~lat, lng = ~long,
+                   label = ~htmlEscape(str_c("Legoland ", name)),
+                   color = "yellow", fillColor = "yellow", fillOpacity = 0.8)
+```
+
+
+
+
+
+

@@ -1,0 +1,8 @@
+"0","library(leaps)"
+"0",""
+"0","regsubsets_forward <- regsubsets(quality ~ ., "
+"0","                                 data = wine_both, "
+"0","                                 nvmax = 12,"
+"0","                                 method = ""forward"")"
+"0",""
+"0","plot(regsubsets_forward)"

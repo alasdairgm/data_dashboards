@@ -1,0 +1,5 @@
+"0","# build the model "
+"0","model1c <- lm(quality ~ total_sulfur_dioxide, data = wine_both)"
+"0",""
+"0","# check the diagnostics"
+"0","autoplot(model1c)"

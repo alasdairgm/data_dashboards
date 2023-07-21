@@ -1,0 +1,8 @@
+"0","```r
+drinks_content %>% 
+  mutate(average_calories = mean(Calories)) %>%  #Average Calories = 193.8719 - Simplified to 194
+    filter(Calories <= average_calories) %>% 
+      summarise(Beverage_category, Beverage, Beverage_prep, Calories) %>% 
+        arrange (desc(Calories)) %>% 
+          tail (5)
+```"

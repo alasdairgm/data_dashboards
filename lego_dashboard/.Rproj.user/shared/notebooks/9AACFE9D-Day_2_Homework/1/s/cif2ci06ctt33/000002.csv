@@ -1,0 +1,11 @@
+"0","```r
+library(CodeClanData)
+library(tidyverse)
+drinks_content
+
+names(drinks_content)
+
+dim(drinks_content)
+
+glimpse(drinks_content)
+```"

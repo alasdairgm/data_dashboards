@@ -1,0 +1,2 @@
+"0","wine_both <- wine_both %>%"
+"0","  select(-density, -free_sulfur_dioxide)"

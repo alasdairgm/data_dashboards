@@ -1,0 +1,4 @@
+"0","```r
+drinks_content %>% 
+  mutate(calorie_diff = Calories - 135,.after = Calories)
+```"

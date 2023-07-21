@@ -1,0 +1,5 @@
+"0","```r
+drink_calories %>% 
+  group_by(Beverage_prep) %>% 
+  summarise(mean(Calories))
+```"

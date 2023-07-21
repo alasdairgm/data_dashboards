@@ -1,0 +1,7 @@
+"0","wine_remaining_resid <- wine_both %>%"
+"0","  add_residuals(model1a) %>%"
+"0","  select(-c(""quality"", ""alcohol""))"
+"0",""
+"0","ggpairs(wine_remaining_resid) + "
+"0","  theme_grey(base_size = 1) +# this bit just changes the axis label font size so we can see"
+"0","  theme(strip.text = element_text(size = 5)) # increase row and col label size"

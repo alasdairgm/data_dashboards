@@ -1,0 +1,2 @@
+"0","model4 <- lm(quality ~ alcohol + volatile_acidity + sulphates + residual_sugar, data = wine_both)"
+"0","autoplot(model4)"

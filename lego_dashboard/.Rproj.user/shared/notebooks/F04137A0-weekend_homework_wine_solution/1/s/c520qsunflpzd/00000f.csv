@@ -1,0 +1,7 @@
+"0","wine_remaining_resid <- wine_both %>%"
+"0","  add_residuals(model4) %>%"
+"0","  select(-c(""quality"", ""alcohol"", ""volatile_acidity"", ""sulphates"", ""residual_sugar""))"
+"0",""
+"0","ggpairs(wine_remaining_resid) +"
+"0","   theme_grey(base_size = 1) + "
+"0","   theme(strip.text = element_text(size = 5))"

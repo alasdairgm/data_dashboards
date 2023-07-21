@@ -1,0 +1,28 @@
+"0","```r
+summary(drinks_content)
+```"
+"1"," Beverage_category    Beverage         Beverage_prep         Calories     Total Fat (g)      Trans Fat (g)   Saturated Fat (g)  Sodium (mg)    
+ Length:242         Length:242         Length:242         Min.   :  0.0   Length:242         Min.   :0.000   Min.   :0.0000    Min.   : 0.000  
+ Class :character   Class :character   Class :character   1st Qu.:120.0   Class :character   1st Qu.:0.100   1st Qu.:0.0000    1st Qu.: 0.000  
+ Mode  :character   Mode  :character   Mode  :character   Median :185.0   Mode  :character   Median :0.500   Median :0.0000    Median : 5.000  
+                                                          Mean   :193.9                      Mean   :1.307   Mean   :0.0376    Mean   : 6.364  
+                                                          3rd Qu.:260.0                      3rd Qu.:2.000   3rd Qu.:0.1000    3rd Qu.:10.000  
+                                                          Max.   :510.0                      Max.   :9.000   Max.   :0.3000    Max.   :40.000  
+ Total Carbohydrates (g) Cholesterol (mg) Dietary Fibre (g)   Sugars (g)     Protein (g)     Vitamin A (% DV)   Vitamin C (% DV)   Calcium (% DV)    
+ Min.   :  0.0           Min.   : 0.00    Min.   :0.0000    Min.   : 0.00   Min.   : 0.000   Length:242         Length:242         Length:242        
+ 1st Qu.: 70.0           1st Qu.:21.00    1st Qu.:0.0000    1st Qu.:18.00   1st Qu.: 3.000   Class :character   Class :character   Class :character  
+ Median :125.0           Median :34.00    Median :0.0000    Median :32.00   Median : 6.000   Mode  :character   Mode  :character   Mode  :character  
+ Mean   :128.9           Mean   :35.99    Mean   :0.8058    Mean   :32.96   Mean   : 6.979                                                           
+ 3rd Qu.:170.0           3rd Qu.:50.75    3rd Qu.:1.0000    3rd Qu.:43.75   3rd Qu.:10.000                                                           
+ Max.   :340.0           Max.   :90.00    Max.   :8.0000    Max.   :84.00   Max.   :20.000                                                           
+ Iron (% DV)        Caffeine (mg)     
+ Length:242         Length:242        
+ Class :character   Class :character  
+ Mode  :character   Mode  :character  
+                                      
+                                      
+                                      
+"
+"0","```r
+#variable types and variable names
+```"
