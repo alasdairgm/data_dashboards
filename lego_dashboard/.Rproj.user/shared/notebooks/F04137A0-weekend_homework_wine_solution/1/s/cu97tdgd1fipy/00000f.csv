@@ -1,7 +1,0 @@
-"0","library(ggfortify)"
-"0",""
-"0","# build the model "
-"0","model1a <- lm(quality ~ alcohol, data = wine_both)"
-"0",""
-"0","# check the diagnostics"
-"0","autoplot(model1a)"

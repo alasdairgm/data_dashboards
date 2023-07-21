@@ -1,4 +1,0 @@
-"0","wine_both %>%"
-"0","  select(quality, wine_colour, region) %>%"
-"0","  ggpairs() + "
-"0","   theme_grey(base_size = 8) # font size of labels"

@@ -1,3 +1,0 @@
-"0","# See what's in model"
-"0","plot(summary(regsubsets_forward)$bic, type = ""b"")"
-"0",""

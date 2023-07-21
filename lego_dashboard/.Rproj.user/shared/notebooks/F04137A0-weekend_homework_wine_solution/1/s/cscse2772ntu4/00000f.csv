@@ -1,2 +1,0 @@
-"0","model2c <- lm(quality ~ alcohol + residual_sugar, data = wine_both)"
-"0","autoplot(model2c)"

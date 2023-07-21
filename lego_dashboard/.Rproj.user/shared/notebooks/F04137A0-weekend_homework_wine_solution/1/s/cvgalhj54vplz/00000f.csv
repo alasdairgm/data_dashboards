@@ -1,2 +1,0 @@
-"0","model2a <- lm(quality ~ alcohol + chlorides, data = wine_both)"
-"0","autoplot(model2a)"

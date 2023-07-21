@@ -1,3 +1,0 @@
-"0","wine_both %>%"
-"0","  distinct(region) %>%"
-"0","  summarise(number_of_regions = n())"

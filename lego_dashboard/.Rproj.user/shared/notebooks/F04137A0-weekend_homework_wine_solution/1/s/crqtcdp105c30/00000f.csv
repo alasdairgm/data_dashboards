@@ -1,6 +1,0 @@
-"0","# now let's plot quality and the remaining variables "
-"0","wine_both %>%"
-"0","  select(quality, residual_sugar, chlorides, free_sulfur_dioxide, total_sulfur_dioxide, sulphates, density, alcohol) %>%"
-"0","  ggpairs() +"
-"0","  theme_grey(base_size = 1) + # font size of labels "
-"0","  theme(strip.text = element_text(size = 5)) # increase row and col label size"

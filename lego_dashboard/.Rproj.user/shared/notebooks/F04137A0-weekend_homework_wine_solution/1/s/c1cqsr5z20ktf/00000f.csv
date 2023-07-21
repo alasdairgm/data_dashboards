@@ -1,6 +1,0 @@
-"0","wine_red <- wine_red %>% "
-"0","  mutate(wine_colour = 'red', .before = fixed_acidity)"
-"0",""
-"0","wine_white <- wine_white %>% "
-"0","  mutate(wine_colour = 'white', .before = fixed_acidity)"
-"0","  "

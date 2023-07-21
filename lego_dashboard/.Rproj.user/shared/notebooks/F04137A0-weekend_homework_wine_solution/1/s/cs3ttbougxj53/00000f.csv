@@ -1,5 +1,0 @@
-"0","# build the model "
-"0","model1b <- lm(quality ~ chlorides, data = wine_both)"
-"0",""
-"0","# check the diagnostics"
-"0","autoplot(model1b)"

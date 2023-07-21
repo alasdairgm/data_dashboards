@@ -1,5 +1,0 @@
-"0","# let's start by plotting quality and the acidity variables "
-"0","wine_both %>%"
-"0","  select(quality, fixed_acidity, volatile_acidity, citric_acid, p_h) %>%"
-"0","  ggpairs() + "
-"0","   theme_grey(base_size = 8) # font size of labels"
