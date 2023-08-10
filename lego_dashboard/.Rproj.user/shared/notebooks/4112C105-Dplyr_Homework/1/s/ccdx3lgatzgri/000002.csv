@@ -1,3 +1,0 @@
-"0","```r
-select(drinks_content, Beverage_category:Calories) 
-```"

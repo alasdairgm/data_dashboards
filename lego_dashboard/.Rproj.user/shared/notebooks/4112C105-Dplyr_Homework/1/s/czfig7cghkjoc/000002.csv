@@ -1,5 +1,0 @@
-"0","```r
-skim(drinks_content)
-```"
-"1","Error in skim(drinks_content) : could not find function \"skim\"
-"

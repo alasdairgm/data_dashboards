@@ -1,0 +1,5 @@
+"0","```r
+legoland_geo <- tibble(name = c(\"Windsor\", \"Billund\", \"California\", \"Florida\", \"New York\", \"Malaysia\", \"Dubai\", \"Japan\", \"Korea\", \"Germany\"),
+                       lat = c(51.46, 55.74, 33.13, 27.99, 41.38, 1.43, 24.92, 35.05, 37.88, 48.43),
+                       long = c(-0.65, 9.13, -117.31, -81.69, -74.31, 103.63, 55.01, 136.84, 127.70, 10.30))
+```"

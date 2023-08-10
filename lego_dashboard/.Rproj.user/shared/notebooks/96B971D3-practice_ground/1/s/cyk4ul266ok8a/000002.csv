@@ -1,0 +1,29 @@
+"0","```r
+library(sf)
+```"
+"1","Linking to GEOS 3.10.2, GDAL 3.4.2, PROJ 8.2.1;
+sf_use_s2() is TRUE
+"
+"0","```r
+library(rnaturalearth)
+library(rnaturalearthdata)
+```"
+"1","
+Attaching package: ‘rnaturalearthdata’
+
+The following object is masked from ‘package:rnaturalearth’:
+
+    countries110
+"
+"0","```r
+library(rgeos)
+```"
+"1","Loading required package: sp
+rgeos version: 0.6-2, (SVN revision 693)
+ GEOS runtime version: 3.10.2-CAPI-1.16.0 
+ Please note that rgeos will be retired during 2023,
+plan transition to sf functions using GEOS at your earliest convenience.
+ GEOS using OverlayNG
+ Linking to sp version: 1.6-0 
+ Polygon checking: TRUE 
+"

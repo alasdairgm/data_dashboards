@@ -1,4 +1,0 @@
-"0","```r
-drink_calories <- select(drinks_content, Beverage_category:Calories)
-filter(drink_calories, is.na(Calories))
-```"

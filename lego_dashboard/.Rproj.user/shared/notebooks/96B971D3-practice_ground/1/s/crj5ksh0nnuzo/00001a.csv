@@ -1,0 +1,21 @@
+"0","lego %>% 
+  ungroup() %>% 
+  mutate(theme_name = fct_reorder(theme_name, star_rating, median,  na.rm = TRUE)) %>% 
+  ggplot(aes(x = theme_name, y = star_rating)) +
+           geom_boxplot(fill = ""goldenrod"", col = ""black"") +
+           stat_boxplot(geom = ""errorbar"") +
+           labs(y = ""Average set rating (stars)"",
+                x = ""Theme"") +
+           theme_minimal() +
+           # coord_cartesian(ylim = c(4, 5)) +
+           theme(axis.text = element_text(size = 6, face = ""bold"", hjust = 1, angle = 45),
+                 axis.title = element_text(size = 12, face = ""bold""),
+                 title = element_text(size = 14, face = ""bold"")) +
+           labs(subtitle = ""Lego themes arranged by median star rating"") 
+"
+"2","Warning: [38;5;255mThere was 1 warning in `mutate()`.[39m
+[38;5;255m[36mℹ[38;5;255m In argument: `theme_name = fct_reorder(theme_name, star_rating, median, na.rm = TRUE)`.[39m
+Caused by warning:
+[33m![39m [38;5;255m`fct_reorder()` removing 98 missing values.
+[36mℹ[38;5;255m Use `.na_rm = TRUE` to silence this message.
+[36mℹ[38;5;255m Use `.na_rm = FALSE` to preserve NAs.[39m"

@@ -1,0 +1,5 @@
+"0","leaflet(legoland_geo) %>% "
+"0","  addProviderTiles(providers$Stamen.Watercolor)  %>% "
+"0","  addCircleMarkers(lat = ~lat, lng = ~long,"
+"0","                   label = ~htmlEscape(str_c(""Legoland "", name)),"
+"0","                   color = ""yellow"", fillColor = ""yellow"", fillOpacity = 0.8)"

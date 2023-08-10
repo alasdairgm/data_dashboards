@@ -1,4 +1,0 @@
-"0","```r
-drinks_content %>% 
-  select(Beverage_category, Beverage, Beverage_prep, Calories)
-```"

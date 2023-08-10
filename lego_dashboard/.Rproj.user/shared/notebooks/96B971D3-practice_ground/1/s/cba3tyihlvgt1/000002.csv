@@ -1,0 +1,9 @@
+"0","```r
+ggplot(data = world) +
+    geom_sf(colour = \"black\", fill = \"lightgreen\") +
+    xlab(\"Longitude\") + ylab(\"Latitude\") +
+    ggtitle(\"World map\") +
+  geom_point(data = legoland_geo,
+             aes(x = long, y = lat),
+             col = \"gold1\", size = rel(2))
+```"

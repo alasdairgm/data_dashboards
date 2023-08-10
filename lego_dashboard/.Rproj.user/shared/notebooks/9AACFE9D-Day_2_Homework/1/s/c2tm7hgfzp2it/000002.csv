@@ -1,7 +1,0 @@
-"0","```r
-drinks_content %>% 
-  group_by(Beverage_category) %>% 
-   summarise(mean_calories = mean(Calories)) %>% 
-    arrange(desc(mean_calories))
-      
-```"
