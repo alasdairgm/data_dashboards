@@ -1,25 +1,6 @@
 server <- function(input, output, session) {
   
   
-  ## Data changes in correlation based on user input 'data_messiness'
-  #   data_choice <- input$data_messiness
-  #   browser()
-  #   if (data_choice == "Low correlation"){
-  #     slr_data_adjusted <- slr_data %>% 
-  #       mutate(height = height + runif(nrow(slr_data), -1,1))
-  #     
-  #   }
-  #   else if (data_choice == "Medium correlation"){
-  #     slr_data_adjusted <- slr_data %>% 
-  #       mutate(height = height + runif(nrow(slr_data), -15,15))
-  #     
-  #   }
-  #   else{
-  #     data_choice <- slr_data %>% 
-  #            mutate(height = sample(height, size = nrow(slr_data)))
-  #     
-  # }
-  
   lego_data_filtered <- reactive({
     lego %>% 
       filter(theme_name == input$theme)
@@ -87,7 +68,7 @@ server <- function(input, output, session) {
         ggplot(aes(x = theme_name, y = star_rating)) +
         geom_boxplot(fill = "goldenrod", col = "black") +
         stat_boxplot(geom = "errorbar") +
-        labs(y = "Average set rating (stars)",
+        labs(y = "Set rating (stars)",
              x = "Theme") +
         theme_minimal() +
         # coord_cartesian(ylim = c(4, 5)) +
@@ -127,7 +108,7 @@ server <- function(input, output, session) {
         ggplot(aes(x = theme_name, y = star_rating)) +
         geom_boxplot(fill = "goldenrod", col = "black") +
         stat_boxplot(geom = "errorbar") +
-        labs(y = "Average set rating (stars)",
+        labs(y = "Set rating (stars)",
              x = "Theme") +
         theme_minimal() +
         # coord_cartesian(ylim = c(4, 5)) +

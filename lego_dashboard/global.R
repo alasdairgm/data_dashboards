@@ -8,19 +8,6 @@ library(rnaturalearthdata)
 library(rgeos)
 library(htmltools)
 
-
-## option 1: remove single-set Jurassic Park themes
-# lego <- read_csv("data/lego_sets.csv") %>% 
-#   select(-prod_long_desc) %>% 
-#   mutate(theme_name_remove = str_detect(
-#     theme_name, "Attack|Rampage|Transport|Pursuit|Breakout|Chase|Escape"
-#     # theme_name, "Nothing"
-#   )) %>% 
-#   filter(country == "US",
-#          theme_name_remove == 0) %>% 
-#   relocate(set_name, .before = 1)
-
-## option 2: group single-set Jurassic Park themes
 lego <- read_csv("data/lego_sets.csv") %>% 
   select(-prod_long_desc) %>% 
   group_by(theme_name) %>% 
@@ -32,7 +19,8 @@ lego <- read_csv("data/lego_sets.csv") %>%
          # remove themes
          theme_name != "BOOST",
          !str_detect(theme_name, "DUPLO")) %>%  
-  relocate(set_name, .before = 1)
+  relocate(set_name, .before = 1) %>% 
+  mutate(theme_name = str_to_title(theme_name))
 
 ## find top 5 sets with highest median ratings for use in tab 2
 best_sets <- lego %>% 
