@@ -1,19 +1,29 @@
 ui <- dashboardPage(
-  dashboardHeader(), ## adds a header
-  dashboardSidebar(), ## adds a sidebar
+  dashboardHeader(
+        title = "Lego dashboard"
+  ), ## adds a header
+  dashboardSidebar(
+    sidebarMenu(
+      menuItem("Set ratings exploration", tabName = "Set ratings", icon = icon("magnifying-glass-chart")),
+      menuItem("Average ratings", tabName = "Average ratings", icon = icon("ranking-star")),
+      menuItem("Legoland locations", tabName = "Legoland locations", icon = icon("map"))
+    )
+  ), ## adds a sidebar
   
   dashboardBody(
-    tabsetPanel(type = "tabs",
-                tabPanel("Star ratings", # tab 1 is to show ratings and prices
+    tabItems(
+      # tab 1 is to show ratings and prices
+                tabItem(tabName = "Set ratings", 
                          br(),
                          fluidRow(
                            column(
                              6,
+                             box(
                              selectInput(
                                inputId = "theme",
-                               label = "Which theme?",
-                               # choices = str_to_title(unique(lego$theme_name))
+                               label = "Which Lego theme?",
                                choices = unique(lego$theme_name)
+                             )
                              )
                            ),
                          ),
@@ -22,8 +32,8 @@ ui <- dashboardPage(
                          tags$br(),
                          tags$br(),
                          fluidRow(
-                           column(6, plotOutput("rating_plot")), # ratings histogram
-                           column(6, plotOutput("price_plot"))  # ratings vs price scatterplot
+                           column(5, offset = 1, plotOutput("rating_plot")), # ratings histogram
+                           column(5, plotOutput("price_plot"))  # ratings vs price scatterplot
                          ),
                          tags$br(),
                          tags$br(),
@@ -36,7 +46,7 @@ ui <- dashboardPage(
                          )
                 ),
                 ###### tab 2 - ratings by theme ######              
-                tabPanel("Average ratings", 
+                tabItem(tabName = "Average ratings", 
                          br(),
                          fluidRow(
                            column(
@@ -64,7 +74,7 @@ ui <- dashboardPage(
                 ),
                 ###### tab 3 - legoland map ######
                 
-                tabPanel("Legoland locations", 
+                tabItem(tabName = "Legoland locations", 
                          fluidRow(
                            column(
                              width = 8,
